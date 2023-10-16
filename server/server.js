@@ -23,5 +23,9 @@ server.use(express.static(__dirname + '/public'))
 
 // Routes
 server.get('/', (req, res) => {
-  res.render('home')
+  const viewData = {
+    title: 'Gallery',
+  }
+  const template = 'home'
+  res.render(template, viewData)
 })
