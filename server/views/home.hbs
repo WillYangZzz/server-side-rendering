@@ -6,8 +6,9 @@
        {{#each art}}
        <ul>
       <li>{{title}}</li>
-      <li>{{artist.name}}</li>
-      <li>{{license.name}}</li>
+      <a href="{{artist.url}}">{{artist.name}}</a>
+      </br>
+      <a href="{{license.url}}">{{license.name}}</a>
       </ul>
       {{/each}}
 
