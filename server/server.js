@@ -28,7 +28,6 @@ server.get('/', (req, res) => {
     title: 'Gallery',
     art,
   }
-  console.log(viewData)
   const template = 'home'
   res.render(template, viewData)
 })
