@@ -15,3 +15,5 @@ test('GET "/" displays the links', async () => {
   const navlinks = screen.getAllByRole('link')
   expect(navlinks[0].textContent).toMatch('Kea in Flight')
 })
+
+test()
