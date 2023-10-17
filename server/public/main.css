@@ -1,0 +1,12 @@
+html {
+  background-color: bisque;
+}
+
+a {
+  text-decoration-style: wavy;
+  color: hotpink;
+}
+
+a:hover {
+  text-decoration: wavy overline lime;
+}
