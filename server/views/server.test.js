@@ -16,4 +16,9 @@ test('GET "/" displays the links', async () => {
   expect(navlinks[0].textContent).toMatch('Kea in Flight')
 })
 
-test()
+test("GET '/artworks/:id' ", async () => {
+  const res = await request(server).get('/artworks/1')
+  document.body.innerHTML = res.text
+  const imagTitle = screen.getByRole('alt')
+  console.log(imagTitle)
+})
