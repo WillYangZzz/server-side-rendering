@@ -2,6 +2,7 @@ import * as Path from 'node:path/posix'
 import * as URL from 'node:url'
 import express from 'express'
 import hbs from 'express-handlebars'
+import art from './data/art.js'
 
 const server = express()
 export default server
@@ -22,3 +23,18 @@ server.set('views', __dirname + '/views')
 server.use(express.static(__dirname + '/public'))
 
 // Routes
+server.get('/', (req, res) => {
+  const viewData = {
+    title: 'Gallery',
+    art,
+  }
+  console.log(viewData)
+
+  res.render('home', viewData)
+})
+
+server.get('/artworks/:id', (req, res) => {
+  const artId = req.params.id
+  const artObject = art.find((el) => el.id == artId)
+  res.render('artworks', artObject)
+})
