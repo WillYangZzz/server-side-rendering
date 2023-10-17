@@ -23,7 +23,7 @@ server.set('views', __dirname + '/views')
 server.use(express.static(__dirname + '/public'))
 
 const viewData = {
-  title: 'Gallery',
+  title: 'NZ Nature Gallery',
   art,
 }
 // Routes
