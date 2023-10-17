@@ -36,12 +36,7 @@ server.get('/', (req, res) => {
 server.get('/artworks/:id', (req, res) => {
   const artworkId = req.params.id
 
-  // console.log(art[0].id)
-
   const artObject = art.find((el) => el.id == artworkId)
-
-  // artObject.artwork is equal to the "/images/kea.jpg"
-  // __dirname + '/public' + artObject.artwork
 
   res.render('artworks', artObject)
 })
