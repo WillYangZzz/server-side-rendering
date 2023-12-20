@@ -32,3 +32,8 @@ server.get('/', (req, res) => {
   const template = 'home'
   res.render(template, viewData)
 })
+
+server.get('/artworks/:id', (req, res) => {
+  const artwork = art.find((item) => Number(req.params.id) === item.id)
+  res.render('artwork', artwork)
+})
