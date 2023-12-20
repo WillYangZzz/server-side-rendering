@@ -27,6 +27,5 @@ const viewData = {
 
 // Routes
 server.get('/', (req, res) => {
-  res.send('Hello, world!')
   res.render('home', viewData)
 })
