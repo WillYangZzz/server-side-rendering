@@ -21,4 +21,12 @@ server.set('view engine', 'hbs')
 server.set('views', __dirname + '/views')
 server.use(express.static(__dirname + '/public'))
 
+const viewData = {
+  title: 'Gallery',
+}
+
 // Routes
+server.get('/', (req, res) => {
+  res.send('Hello, world!')
+  res.render('home', viewData)
+})
