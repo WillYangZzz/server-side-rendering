@@ -27,5 +27,6 @@ const viewData = {
 
 // Routes
 server.get('/', (req, res) => {
-  res.render('home', viewData)
+  const template = 'home'
+  res.render(template, viewData)
 })
