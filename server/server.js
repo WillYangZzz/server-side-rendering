@@ -2,7 +2,7 @@ import * as Path from 'node:path/posix'
 import * as URL from 'node:url'
 import express from 'express'
 import hbs from 'express-handlebars'
-import art from './data/art'
+import art from './data/art.js'
 
 const server = express()
 export default server
